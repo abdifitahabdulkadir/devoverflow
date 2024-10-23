@@ -1,7 +1,7 @@
 import { ClerkProvider } from "@clerk/nextjs";
 import React from "react";
 import { Metadata } from "next";
-import { inter } from "@/lib/font";
+import { inter, spaceGrok } from "@/lib/font";
 
 export const metadata: Metadata = {
   title: "DevFlow",
@@ -25,7 +25,10 @@ export default function RootLayout({
       }}
     >
       <html lang="en">
-        <body className={`${inter.className}`}>{children}</body>
+        <body className={`${inter.variable} ${spaceGrok.variable}`}>
+          {children}
+          <h4 className="h1-bold font-spaceGrotesk">i am font boy</h4>
+        </body>
       </html>
     </ClerkProvider>
   );

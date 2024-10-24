@@ -1,12 +1,6 @@
 "use client";
 
-import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 
 interface ThemeProsType {
   mode: string;
@@ -20,28 +14,33 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
-  const [mode, setMode] = useState<string>("light");
+  const [mode, setMode] = useState<string>("");
 
-  const handleModle = useCallback(() => {
-    if (mode === "light") {
+  const handleModle = () => {
+    if (
+      localStorage.theme === "dark" ||
+      ("theme" in localStorage &&
+        window.matchMedia("prefers-color-scheme:dark").matches)
+    ) {
       setMode("dark");
-
       // add dark class to the html element.
+      document.documentElement.classList.remove("light");
       document.documentElement.classList.add("dark");
-    } else if (mode === "dark") {
+    } else {
       setMode("light");
-
       // add dark class to the html element.
+      document.documentElement.classList.remove("dark");
       document.documentElement.classList.add("light");
     }
-  }, [mode]);
+  };
 
   useEffect(
     function () {
       handleModle();
     },
-    [handleModle]
+    [mode]
   );
+
   return (
     <ThemeContex.Provider value={{ mode, setMode }}>
       {children}

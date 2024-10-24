@@ -1,7 +1,7 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import React from "react";
 import { Metadata } from "next";
 import { inter, spaceGrok } from "@/lib/font";
+import Providers from "@/components/Providers";
 
 export const metadata: Metadata = {
   title: "DevFlow",
@@ -14,22 +14,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  console.log(inter.style.fontFamily);
   return (
-    <ClerkProvider
-      appearance={{
-        elements: {
-          formButtonPrimary: "primary-gradient",
-          footerActionLink: "primary-text-gradient hover:text-primary-500",
-        },
-      }}
-    >
-      <html lang="en">
-        <body className={`${inter.variable} ${spaceGrok.variable}`}>
-          {children}
-          <h4 className="h1-bold font-spaceGrotesk">i am font boy</h4>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={`${inter.variable} ${spaceGrok.variable}`}>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
   );
 }

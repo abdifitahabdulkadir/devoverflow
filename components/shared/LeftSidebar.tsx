@@ -28,7 +28,7 @@ export default function LeftSidebar() {
                 className={` ${isActive ? "" : "invert-colors size-[20px] group-hover:invert-0 md:size-[15px]"}`}
               />
               <span
-                className={`${isActive ? "base-bold  " : "small-regular"}  md:small-regular  text-[.6rem] group-hover:text-light-900 max-md:hidden`}
+                className={`${isActive ? "base-bold  " : "small-regular"}  md:small-regular lg:base-medium  text-[.6rem] group-hover:text-light-900 max-md:hidden`}
               >
                 {label}
               </span>

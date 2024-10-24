@@ -1,5 +1,6 @@
 import LeftSidebar from "@/components/shared/LeftSidebar";
 import Navbar from "@/components/shared/navbar/Navbar";
+import RightSidebar from "@/components/shared/RightSidebar";
 import React from "react";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -54,9 +55,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </section>
 
         {/* Right Sidebar */}
-        <div className="size-full w-[266px] border-l border-red-600">
-          right hand isde
-        </div>
+        <RightSidebar />
       </div>
     </main>
   );

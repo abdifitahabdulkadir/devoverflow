@@ -15,9 +15,9 @@ import React from "react";
 export default function ThemeSwitcher() {
   const { mode, setMode } = useTheme();
   return (
-    <Menubar className="border-none bg-transparent shadow-none">
+    <Menubar className=" border-none bg-transparent shadow-none">
       <MenubarMenu>
-        <MenubarTrigger className="focus:bg-light-900 data-[state=open]:bg-light-900 dark:focus:bg-dark-200 dark:data-[state=open]:bg-dark-200">
+        <MenubarTrigger className="cursor-pointer focus:bg-light-900 data-[state=open]:bg-light-900 dark:focus:bg-dark-200 dark:data-[state=open]:bg-dark-200">
           {mode === "light" ? (
             <Image
               src={"/assets/icons/sun.svg"}

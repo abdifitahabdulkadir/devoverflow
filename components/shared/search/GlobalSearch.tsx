@@ -4,7 +4,7 @@ import React from "react";
 
 export default function GlobalSearch() {
   return (
-    <div className="relative order-3 col-span-full w-full max-w-[600px] lg:order-2 lg:col-span-1">
+    <div className="relative  w-full max-w-[600px] max-lg:hidden">
       <div className="background-light800_darkgradient relative flex min-h-[56px] grow items-center gap-1 rounded-xl p-2">
         <Image
           src={"/assets/icons/search.svg"}
@@ -16,7 +16,7 @@ export default function GlobalSearch() {
         <Input
           placeholder="search..."
           value=""
-          className="paragraph-regular no-focus placeholder background-light800_darkgradient border-none shadow-none outline-none "
+          className="paragraph-regular no-focus  placeholder border-none bg-transparent caret-dark-200 shadow-none  outline-none dark:caret-light-900 "
         />
       </div>
     </div>

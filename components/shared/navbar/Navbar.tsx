@@ -8,7 +8,7 @@ import GlobalSearch from "../search/GlobalSearch";
 
 export default function Navbar() {
   return (
-    <nav className=" background-light900_dark200 fixed z-50 grid w-full grid-cols-2 place-items-center gap-6 p-6 shadow-light-300 dark:shadow-none sm:px-12 lg:grid-cols-[1fr_2fr_1fr]">
+    <nav className=" background-light900_dark200 fixed z-50 flex w-full   items-center justify-between gap-6 p-6 shadow-light-300 dark:shadow-none sm:px-12 ">
       <Link href={"/"} className="flex  items-center gap-1 justify-self-start">
         <Image
           src={"/assets/images/logo.svg"}
@@ -22,7 +22,7 @@ export default function Navbar() {
         </p>
       </Link>
       <GlobalSearch />
-      <div className="flex-between order-2 gap-2  justify-self-end text-white lg:order-3">
+      <div className="flex-between gap-2  text-white ">
         <ThemeSwitcher />
         <SignedIn>
           <UserButton

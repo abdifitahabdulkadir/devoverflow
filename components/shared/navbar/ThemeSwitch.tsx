@@ -36,7 +36,7 @@ export default function ThemeSwitcher() {
             />
           )}
         </MenubarTrigger>
-        <MenubarContent className="absolute -right-12 mt-3 min-w-[120px] rounded border py-2 dark:border-dark-400 dark:bg-dark-300">
+        <MenubarContent className="absolute -right-12 mt-3 min-w-[120px] rounded border bg-light-900 py-2 dark:border-dark-400 dark:bg-dark-300">
           {themes.map(({ icon, label, value }, index) => {
             return (
               <MenubarItem
@@ -50,7 +50,7 @@ export default function ThemeSwitcher() {
                 }}
                 key={index}
                 className=" flex cursor-pointer items-center
-              gap-x-2 py-3 pl-3 pr-10 dark:focus:bg-dark-400  "
+              gap-x-2 py-3 pl-3 pr-10 focus:bg-light-800 dark:focus:bg-dark-400  "
               >
                 <Image
                   src={icon}
